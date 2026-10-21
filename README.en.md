@@ -6,31 +6,45 @@
   <img src="docs/images/hero-analysis.png" alt="GulfGate Country Analysis Skill hero" width="100%">
 </div>
 
-> Turn fragmented information about the six GCC markets into a decision brief that a team can discuss, assign, and stop when the evidence does not support further spending.
+> Turn fragmented information about the six GCC markets into a clear business decision that a team can discuss, assign, and execute.
 
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-compatible-1f6f50)](SKILL.md)
 [![Markets](https://img.shields.io/badge/GCC%20markets-6-c18b49)](#coverage)
 [![Python](https://img.shields.io/badge/Python-3%20standard%20library-3776ab)](#install)
 [![Validation](https://img.shields.io/badge/tests-passing-2f7d55)](tests/validate_package.py)
 
-This is not a generic “Middle East market report” prompt. It separates country, jurisdiction, product use, transaction role, evidence status, and execution stage, then answers four management questions:
+GulfGate brings country, jurisdiction, product use, transaction role, evidence status, and execution stage into one analysis framework, then answers four management questions:
 
 1. Should we proceed?
 2. What should happen first?
 3. What must be true before we increase investment?
 4. What signal should make us pause, change course, or exit?
 
-## Why it exists
+## One input, an executable result
 
-Most international expansion mistakes are not caused by a lack of information. They come from collapsing different evidence layers into one conclusion:
+- **Entry sequence:** which market, customer, and commercial path to prioritize;
+- **Decision evidence:** what the team needs for demand, buyers, partners, access, delivery, and collection;
+- **Action roadmap:** 30/60/90-day actions, owners, milestones, and scale-up conditions;
+- **Executive brief:** one view of the opportunity, cost, critical variables, next steps, and resource commitment.
 
-- a large market is treated as accessible revenue;
-- a friendly partner is treated as a capable partner;
-- a product certificate is treated as project and use-case approval;
-- a live website is treated as a currently valid rule;
-- two meetings are treated as permission to quote, sign, or hold inventory.
+## Built for these teams
 
-GulfGate forces every recommendation back to evidence, a calculation, or an explicit planning assumption.
+| Role | What you get |
+| --- | --- |
+| Founder / regional lead | Market comparison, entry sequence, resource priorities, and stage gates |
+| Sales / commercial | Buyer and partner assessment, purchasing chain mapping, deal and collection path |
+| Project / delivery | Access, import, installation, acceptance, and local operating checklist |
+| Legal / compliance | Structured review of jurisdiction, product use, evidence layers, and escalation items |
+
+## Three high-frequency cases
+
+<div align="center">
+  <img src="docs/images/cases-analysis.png" alt="Three Gulf market analysis use cases" width="100%">
+</div>
+
+1. **UAE · Commercial energy-storage distribution:** move from “find a distributor” to buyers, importer responsibility, technical service, and a 90-day pilot.
+2. **Saudi Arabia · Medical-device partner screening:** separate entity registration, product access, authorized representation, project eligibility, and service capability.
+3. **Qatar · Construction-materials bid precheck:** align buyer, procurement eligibility, technical files, delivery, and payment conditions before pricing.
 
 ## Demo
 
@@ -48,7 +62,7 @@ industrial parks and commercial buildings. Decide whether to proceed and create
 a 90-day validation plan.
 ```
 
-See the full public-safe example in [examples/analysis-demo.md](examples/analysis-demo.md).
+See the full public-safe example and case library in [examples/analysis-demo.md](examples/analysis-demo.md).
 
 ## Three operating modes
 
@@ -68,7 +82,7 @@ mkdir -p ~/.codex/skills
 cp -R gulfgate-country-analysis ~/.codex/skills/
 ```
 
-Copy the complete directory. `references/`, `assets/`, and `scripts/` are required runtime resources.
+Install the complete directory. The Skill ships with its `references/`, `assets/`, and `scripts/` resources.
 
 Run the offline package check:
 
@@ -92,13 +106,13 @@ python tests/validate_package.py
 
 The release check validates frontmatter, local links, knowledge paths, JSONL parsing, and the local lookup smoke test. GitHub Actions runs the same check on every push and pull request.
 
-Passing tests prove that the package is readable and operational. They do not prove that every regulatory, tax, or certification conclusion is current.
+The same checks run automatically with every update, keeping knowledge structure, lookup scripts, document links, and release files consistent.
 
-## Fact boundary
+## Official-source verification chain
 
-This Skill is a research workflow and historical retrieval aid. It does not replace legal, tax, medical, engineering, or regulator advice. High-impact and time-sensitive facts require live source verification with publication date, scope, and verification date.
+For policy, pricing, access, project status, and legal requirements, the Skill prioritizes the competent authority and the official source text, then tracks publication date, scope, version evidence, and verification date.
 
-The Skill includes no search entitlement, API key, or backend service. When the host cannot access the web, the correct output is an explicit “unverified” status plus a verification plan.
+Decision-grade reports keep the key source beside the corresponding conclusion, making the full chain from source to judgment, impact, and action easy to review. Hosts with web access can verify in real time; the local knowledge base continues to support analysis, case comparison, and evidence checklists.
 
 ## Companion project
 
@@ -112,5 +126,5 @@ Contributions are welcome through issues and pull requests. See [CONTRIBUTING.md
 
 ## License
 
-No open-source license is attached yet. Copyright remains with the co-creators. Written permission is required before public reuse, commercial use, or redistribution.
+Copyright is jointly held by both co-creators. Contact the authors to discuss public reuse, commercial collaborations, industry expansion, or custom editions.
 

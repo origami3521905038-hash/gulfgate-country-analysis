@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing:border-box; }
+  html,body { margin:0; width:1440px; height:720px; overflow:hidden; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif; color:#17352a; background:#eee8da; }
+  body::before { content:""; position:fixed; inset:0; opacity:.44; background-image:radial-gradient(#9eac9f 1px,transparent 1px); background-size:26px 26px; }
+  main { position:relative; width:1320px; height:600px; margin:60px auto; padding:37px 39px; border-radius:28px; background:#f8f5ed; border:1px solid rgba(31,70,53,.1); box-shadow:0 38px 90px rgba(33,45,35,.18); }
+  .top { display:flex; justify-content:space-between; align-items:end; }
+  .kicker { color:#9c713b; font-size:11px; font-weight:850; letter-spacing:.17em; text-transform:uppercase; }
+  h1 { margin:9px 0 0; font:600 39px/1.1 Georgia,"Songti SC",serif; letter-spacing:-.035em; }
+  .summary { max-width:370px; color:#6a776f; font-size:13px; line-height:1.6; text-align:right; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:31px; }
+  .case { position:relative; min-height:398px; padding:24px; border-radius:20px; overflow:hidden; background:white; border:1px solid #ddd5c5; box-shadow:0 10px 30px rgba(33,45,35,.06); }
+  .case::after { content:""; position:absolute; right:-45px; bottom:-65px; width:185px; height:185px; border-radius:50%; border:32px solid rgba(35,98,72,.055); }
+  .num { width:36px; height:36px; border-radius:12px; display:grid; place-items:center; background:#153c2d; color:#f0cf95; font:700 15px/1 Georgia,serif; }
+  .country { margin-top:21px; color:#a5763f; font-size:10px; font-weight:850; letter-spacing:.13em; text-transform:uppercase; }
+  h2 { margin:8px 0 0; font:600 23px/1.3 Georgia,"Songti SC",serif; letter-spacing:-.025em; }
+  .prompt { margin-top:17px; padding:14px 15px; border-radius:12px; background:#f1ede3; color:#59675f; font-size:11.5px; line-height:1.55; }
+  .flow { margin-top:16px; display:grid; gap:8px; }
+  .step { display:flex; gap:9px; align-items:center; color:#40564b; font-size:11.5px; line-height:1.4; }
+  .tick { flex:0 0 auto; width:17px; height:17px; border-radius:50%; display:grid; place-items:center; color:white; background:#34785a; font-size:10px; font-weight:800; }
+  .result { margin-top:17px; padding-top:13px; border-top:1px solid #e3ddd1; color:#2a5f49; font-size:11.5px; font-weight:700; line-height:1.45; }
+  footer { position:absolute; left:39px; bottom:15px; color:#8f8b80; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <div><div class="kicker">Case library · from question to action</div><h1>三个高频海湾业务场景</h1></div>
+    <div class="summary">每个案例都从业务问题出发，拆出目标买方、交易责任、证据链与下一步动作。</div>
+  </div>
+  <div class="grid">
+    <section class="case">
+      <div class="num">01</div><div class="country">UAE · ENERGY STORAGE</div>
+      <h2>商用储能<br>经销进入</h2>
+      <div class="prompt">“计划通过经销商进入阿联酋，如何验证首批园区与楼宇项目？”</div>
+      <div class="flow">
+        <div class="step"><span class="tick">✓</span><span>锁定买方、采购触发与项目预算</span></div>
+        <div class="step"><span class="tick">✓</span><span>核查进口、技术、仓储与售后责任</span></div>
+        <div class="step"><span class="tick">✓</span><span>设计 90 天小单与回款验证</span></div>
+      </div>
+      <div class="result">最终输出：进入路径 + 伙伴清单 + 阶段闸门</div>
+    </section>
+    <section class="case">
+      <div class="num">02</div><div class="country">SAUDI · MEDICAL DEVICES</div>
+      <h2>医疗器械<br>伙伴筛选</h2>
+      <div class="prompt">“潜在伙伴说可以做注册、授权代表和医院渠道，需要先核对什么？”</div>
+      <div class="flow">
+        <div class="step"><span class="tick">✓</span><span>拆分企业、产品与项目资格</span></div>
+        <div class="step"><span class="tick">✓</span><span>核对授权代表与上市后责任</span></div>
+        <div class="step"><span class="tick">✓</span><span>验证医院、库存与技术服务能力</span></div>
+      </div>
+      <div class="result">最终输出：伙伴评分证据 + 责任矩阵 + 补证顺序</div>
+    </section>
+    <section class="case">
+      <div class="num">03</div><div class="country">QATAR · TENDER PRECHECK</div>
+      <h2>建材项目<br>投标预检</h2>
+      <div class="prompt">“收到项目邀请，是否适合在 30 天内投入方案和样品？”</div>
+      <div class="flow">
+        <div class="step"><span class="tick">✓</span><span>识别业主、总包与采购决策链</span></div>
+        <div class="step"><span class="tick">✓</span><span>对齐技术文件、样品与交付条件</span></div>
+        <div class="step"><span class="tick">✓</span><span>复算价格、账期、保函与利润</span></div>
+      </div>
+      <div class="result">最终输出：投标条件表 + 报价策略 + 升级节点</div>
+    </section>
+  </div>
+  <footer>Public-safe case library · decision-grade outputs</footer>
+</main>
+</body>
+</html>
+
