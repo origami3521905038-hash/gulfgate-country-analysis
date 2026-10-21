@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1440px; height: 900px; overflow: hidden; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; color: #17352a; background: #eee8da; }
+  body::before { content: ""; position: fixed; inset: 0; opacity: .48; background-image: radial-gradient(#9dae9f 1px, transparent 1px); background-size: 26px 26px; }
+  .frame { position: relative; width: 1320px; height: 780px; margin: 60px auto; background: #f8f5ed; border-radius: 26px; overflow: hidden; box-shadow: 0 38px 90px rgba(33,45,35,.18); border: 1px solid rgba(31,70,53,.1); }
+  header { height: 84px; display: flex; align-items: center; justify-content: space-between; padding: 0 36px; background: #12362a; color: #f8f1e1; }
+  .brand { display: flex; align-items: center; gap: 13px; font-weight: 750; letter-spacing: -.02em; }
+  .logo { width: 34px; height: 34px; border-radius: 10px; background: #d8a95d; color: #17352a; display: grid; place-items: center; font: 800 18px/1 Georgia, serif; }
+  .crumb { font-size: 12px; letter-spacing: .12em; color: rgba(248,241,225,.58); text-transform: uppercase; }
+  .main { display: grid; grid-template-columns: 420px 1fr; height: calc(100% - 84px); }
+  aside { padding: 34px 30px; border-right: 1px solid #dcd6c8; background: #f1ede3; }
+  .label { font-size: 11px; font-weight: 800; letter-spacing: .16em; color: #99703a; text-transform: uppercase; }
+  .prompt { margin-top: 15px; padding: 23px; background: white; border: 1px solid #ddd4c3; border-radius: 16px; box-shadow: 0 8px 24px rgba(38,48,38,.05); font: 15px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; color: #31453b; }
+  .tag { display: inline-flex; margin-top: 22px; padding: 7px 11px; border-radius: 999px; background: #e1eee5; color: #2a614b; font-size: 11px; font-weight: 700; }
+  .assumptions { margin-top: 26px; }
+  .assumption { display: flex; gap: 10px; margin-top: 13px; font-size: 13px; line-height: 1.55; color: #57675f; }
+  .dot { flex: 0 0 auto; width: 7px; height: 7px; margin-top: 7px; border-radius: 50%; background: #b88945; }
+  article { padding: 32px 38px; overflow: hidden; }
+  .article-head { display: flex; justify-content: space-between; align-items: start; }
+  h1 { margin: 0; font: 600 32px/1.18 Georgia, "Songti SC", serif; letter-spacing: -.035em; color: #19372b; }
+  .status { padding: 9px 13px; color: #1f6b50; background: #e0f0e7; border: 1px solid #b6d7c6; border-radius: 999px; font-size: 12px; font-weight: 750; }
+  .callout { margin-top: 22px; padding: 20px 22px; border-left: 5px solid #c89447; background: #f4ead6; border-radius: 0 14px 14px 0; }
+  .callout b { display: block; font: 600 25px/1.35 Georgia, "Songti SC", serif; }
+  .callout span { display: block; margin-top: 6px; color: #726b5e; font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 13px; margin-top: 20px; }
+  .card { min-height: 159px; padding: 18px; background: white; border: 1px solid #ded8ca; border-radius: 15px; }
+  .card small { font-size: 10px; letter-spacing: .13em; font-weight: 800; color: #947044; }
+  .card h3 { margin: 11px 0 8px; font-size: 17px; letter-spacing: -.02em; }
+  .card p { margin: 0; color: #66736d; font-size: 12.5px; line-height: 1.65; }
+  .timeline { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 24px; padding-top: 20px; border-top: 1px solid #ddd7ca; }
+  .phase { position: relative; padding-right: 12px; }
+  .phase::before { content: ""; position: absolute; top: -26px; left: 0; width: 100%; height: 3px; background: #d9d2c3; }
+  .phase:first-child::before { background: #245842; }
+  .phase b { display: block; color: #255d46; font-size: 12px; }
+  .phase span { display: block; margin-top: 5px; color: #747a74; font-size: 11px; line-height: 1.45; }
+  footer { position: absolute; left: 31px; bottom: 16px; font-size: 10px; letter-spacing: .1em; color: #8b8a81; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <header>
+      <div class="brand"><span class="logo">G</span> GulfGate · Country Analysis</div>
+      <div class="crumb">Demo workspace / public-safe test case</div>
+    </header>
+    <div class="main">
+      <aside>
+        <div class="label">01 · 用户输入</div>
+        <div class="prompt">一家中型商用储能企业，计划通过当地经销商进入阿联酋，暂无当地实体。<br><br>首批目标客户为工业园区和商业楼宇。请判断是否值得推进，并给出 90 天验证计划。</div>
+        <div class="tag">测试场景 · 不含真实客户</div>
+        <div class="assumptions">
+          <div class="label">输入边界</div>
+          <div class="assumption"><span class="dot"></span><span>国家：阿联酋；产品用途：工商业储能</span></div>
+          <div class="assumption"><span class="dot"></span><span>交易模式：经销出口；阶段：进入前验证</span></div>
+          <div class="assumption"><span class="dot"></span><span>现行法规、税率与认证：待本轮核验</span></div>
+        </div>
+      </aside>
+      <article>
+        <div class="article-head">
+          <h1>阿联酋市场进入<br>90 天预检</h1>
+          <div class="status">可进入验证阶段</div>
+        </div>
+        <div class="callout">
+          <b>先跑通一笔可复算的小单，再讨论本地实体。</b>
+          <span>现阶段最大的未知不是“市场大不大”，而是买方、进口责任、准入层级和回款路径。</span>
+        </div>
+        <div class="grid">
+          <div class="card"><small>DECISION 01</small><h3>真实买方</h3><p>用 2–3 个具体项目确认业主、采购人、设计方与 EPC 的角色，不用宏观规模代替需求。</p></div>
+          <div class="card"><small>DECISION 02</small><h3>伙伴能力</h3><p>分项核查牌照、进口、技术、售后、库存和退出条件。“有关系”不能替代履约证据。</p></div>
+          <div class="card"><small>DECISION 03</small><h3>准入层级</h3><p>产品准入、项目准入、供应商注册和客户验收分别核对，不用单一证书互替。</p></div>
+        </div>
+        <div class="timeline">
+          <div class="phase"><b>D1–15</b><span>锁定买方与采购触发</span></div>
+          <div class="phase"><b>D16–35</b><span>核查伙伴与进口链</span></div>
+          <div class="phase"><b>D36–60</b><span>拆分准入与单证</span></div>
+          <div class="phase"><b>D61–90</b><span>小单验证现金与交付</span></div>
+        </div>
+      </article>
+    </div>
+    <footer>Illustrative output generated for the repository demo · verify current facts before use</footer>
+  </div>
+</body>
+</html>
+

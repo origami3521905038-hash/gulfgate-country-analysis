@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1440px; height: 760px; overflow: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans Arabic", sans-serif;
+    color: #f8f3e7;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(194, 151, 84, .24), transparent 31%),
+      radial-gradient(circle at 12% 88%, rgba(47, 105, 84, .38), transparent 30%),
+      linear-gradient(135deg, #0b211b 0%, #12372b 52%, #071713 100%);
+    position: relative;
+  }
+  body::before {
+    content: ""; position: absolute; inset: 0; opacity: .16;
+    background-image:
+      linear-gradient(rgba(247, 239, 220, .12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(247, 239, 220, .12) 1px, transparent 1px);
+    background-size: 52px 52px;
+    mask-image: linear-gradient(90deg, black, transparent 75%);
+  }
+  .shell { position: relative; display: grid; grid-template-columns: 1.12fr .88fr; height: 100%; padding: 64px 72px 58px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 12px; color: #e2b46d; font-size: 15px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  .eyebrow::before { content: ""; width: 36px; height: 2px; background: #e2b46d; }
+  h1 { margin: 28px 0 6px; font-family: Georgia, "Songti SC", serif; font-size: 92px; line-height: .94; letter-spacing: -.045em; font-weight: 600; }
+  h2 { margin: 14px 0 0; font-size: 37px; line-height: 1.2; font-weight: 700; color: #fff9ed; letter-spacing: -.025em; }
+  p { width: 620px; margin: 26px 0 0; color: rgba(248, 243, 231, .76); font-size: 21px; line-height: 1.72; }
+  .metrics { display: flex; gap: 14px; margin-top: 38px; }
+  .metric { padding: 16px 20px; min-width: 118px; border: 1px solid rgba(247, 239, 220, .17); background: rgba(255,255,255,.055); border-radius: 16px; }
+  .metric b { display: block; font: 600 28px/1 Georgia, serif; color: #ffd797; }
+  .metric span { display: block; margin-top: 8px; font-size: 12px; letter-spacing: .07em; color: rgba(248,243,231,.58); text-transform: uppercase; }
+  .right { position: relative; display: flex; align-items: center; justify-content: center; }
+  .orbit { position: absolute; width: 515px; height: 515px; border: 1px solid rgba(231, 190, 121, .18); border-radius: 50%; }
+  .orbit::before, .orbit::after { content: ""; position: absolute; border: 1px dashed rgba(231, 190, 121, .18); border-radius: 50%; inset: 48px; }
+  .orbit::after { inset: 118px; }
+  .card { position: relative; width: 455px; padding: 30px; border-radius: 28px; background: linear-gradient(158deg, rgba(252,246,232,.98), rgba(236,224,199,.92)); color: #19372c; box-shadow: 0 34px 80px rgba(0,0,0,.36); transform: rotate(-2.4deg); }
+  .card-top { display: flex; align-items: center; justify-content: space-between; }
+  .card-kicker { font-size: 12px; letter-spacing: .15em; color: #8a6841; font-weight: 800; }
+  .pulse { width: 10px; height: 10px; border-radius: 50%; background: #2f7a5e; box-shadow: 0 0 0 9px rgba(47,122,94,.12); }
+  .verdict { margin-top: 22px; font: 600 33px/1.25 Georgia, "Songti SC", serif; letter-spacing: -.02em; }
+  .verdict em { color: #a56c28; font-style: normal; }
+  .flow { margin-top: 28px; display: grid; gap: 10px; }
+  .step { display: grid; grid-template-columns: 38px 1fr auto; gap: 12px; align-items: center; padding: 14px 15px; border-radius: 13px; background: rgba(22,55,43,.07); }
+  .num { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: #183c2e; color: #f7e7c3; font: 700 12px/1 Georgia, serif; }
+  .step b { font-size: 14px; }
+  .step small { color: #6d7d74; font-size: 11px; letter-spacing: .04em; }
+  .countries { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .country { padding: 8px 11px; border: 1px solid rgba(25,55,44,.18); border-radius: 999px; font-size: 12px; color: #355a4c; }
+  .mark { position: absolute; left: 48px; bottom: 36px; font: 700 12px/1 -apple-system, sans-serif; letter-spacing: .15em; color: rgba(248,243,231,.32); }
+</style>
+</head>
+<body>
+  <main class="shell">
+    <section>
+      <div class="eyebrow">Agent Skill · Decision-grade intelligence</div>
+      <h1>GulfGate</h1>
+      <h2>海湾之门 · 国别研判助手</h2>
+      <p>把国家、产品用途、交易角色和证据状态放到同一张决策桌上。少一点“市场概况”，多一条能落到行动、闸门与停止条件的判断主线。</p>
+      <div class="metrics">
+        <div class="metric"><b>6</b><span>GCC markets</span></div>
+        <div class="metric"><b>5</b><span>industries</span></div>
+        <div class="metric"><b>565</b><span>records</span></div>
+        <div class="metric"><b>1</b><span>decision file</span></div>
+      </div>
+      <div class="mark">PUBLIC-SAFE DEMO · 2026</div>
+    </section>
+    <section class="right">
+      <div class="orbit"></div>
+      <div class="card">
+        <div class="card-top">
+          <span class="card-kicker">DECISION BRIEF / 90 DAYS</span>
+          <span class="pulse"></span>
+        </div>
+        <div class="verdict">先验证，<br><em>不急着设实体。</em></div>
+        <div class="flow">
+          <div class="step"><span class="num">1</span><b>锁定真实买方</b><small>DEMAND</small></div>
+          <div class="step"><span class="num">2</span><b>核查伙伴责任</b><small>CAPABILITY</small></div>
+          <div class="step"><span class="num">3</span><b>拆开准入层级</b><small>ACCESS</small></div>
+          <div class="step"><span class="num">4</span><b>跑通一笔小单</b><small>EVIDENCE</small></div>
+        </div>
+        <div class="countries"><span class="country">沙特</span><span class="country">阿联酋</span><span class="country">卡塔尔</span><span class="country">科威特</span><span class="country">巴林</span><span class="country">阿曼</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

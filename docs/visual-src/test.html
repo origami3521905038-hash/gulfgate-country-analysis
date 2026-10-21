@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1440px; height: 900px; overflow: hidden; }
+  body { background: #091913; color: #edf5ed; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+  .shell { width: 100%; height: 100%; padding: 70px 94px; background: radial-gradient(circle at 86% 12%, rgba(196,154,84,.22), transparent 28%), linear-gradient(150deg,#07140f,#123429); }
+  .top { display: flex; justify-content: space-between; align-items: end; }
+  .kicker { color: #d9ae6c; font-size: 12px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+  h1 { margin: 13px 0 0; font: 600 48px/1 Georgia, "Songti SC", serif; letter-spacing: -.035em; }
+  .badge { padding: 11px 16px; border: 1px solid rgba(130,218,172,.35); background: rgba(52,122,87,.2); border-radius: 999px; color: #a6e0bc; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+  .terminal { margin-top: 46px; border-radius: 22px; border: 1px solid rgba(229,240,230,.14); overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,.25); }
+  .bar { height: 48px; display: flex; align-items: center; gap: 8px; padding: 0 18px; background: rgba(255,255,255,.045); border-bottom: 1px solid rgba(255,255,255,.08); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #d46858; } .dot:nth-child(2) { background: #d8a74f; } .dot:nth-child(3) { background: #5ba47b; }
+  .bar span { margin-left: 12px; color: rgba(236,245,237,.48); font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .code { padding: 26px 28px 20px; background: rgba(0,0,0,.15); font: 14px/1.8 ui-monospace, SFMono-Regular, Menlo, monospace; color: #d4dfd6; }
+  .cmd { color: #8ddab1; } .muted { color: #7c9185; } .key { color: #f0c277; }
+  .json { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; padding: 0 28px 28px; }
+  .panel { min-height: 300px; padding: 24px; border-radius: 17px; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.08); }
+  .panel h2 { margin: 0 0 20px; color: #eff6ef; font-size: 15px; letter-spacing: .02em; }
+  .row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.075); font-size: 13px; }
+  .row:last-child { border-bottom: 0; }
+  .pass { color: #8ed3a9; font-weight: 750; letter-spacing: .05em; }
+  .big { font: 600 35px/1 Georgia, serif; color: #edc17c; }
+  .sub { margin-top: 7px; color: #84998d; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .m { padding: 18px 14px; border: 1px solid rgba(255,255,255,.08); border-radius: 13px; background: rgba(255,255,255,.035); }
+  .m b { display: block; font: 600 32px/1 Georgia, serif; color: #f0d096; }
+  .m span { display: block; margin-top: 8px; color: #8fa397; font-size: 10px; line-height: 1.35; letter-spacing: .05em; text-transform: uppercase; }
+  .foot { margin-top: 24px; display: flex; justify-content: space-between; color: #73877c; font-size: 11px; letter-spacing: .08em; }
+</style>
+</head>
+<body>
+  <main class="shell">
+    <div class="top">
+      <div><div class="kicker">Release verification · offline test record</div><h1>国别研判 Skill · 本地校验</h1></div>
+      <div class="badge">ALL CHECKS PASSED</div>
+    </div>
+    <section class="terminal">
+      <div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>gulfgate-country-analysis / tests / validate_package.py</span></div>
+      <div class="code"><span class="cmd">$ python tests/validate_package.py</span><br><span class="muted">→ frontmatter, local links, knowledge records and lookup smoke test</span><br><span class="key">{</span> "status": <span class="cmd">"passed"</span>, "skill": <span class="cmd">"gulfgate-country-analysis"</span> <span class="key">}</span></div>
+      <div class="json">
+        <div class="panel">
+          <h2>Package checks</h2>
+          <div class="row"><span>SKILL.md frontmatter</span><span class="pass">PASSED</span></div>
+          <div class="row"><span>Local resource links</span><span class="pass">PASSED</span></div>
+          <div class="row"><span>JSONL record parsing</span><span class="pass">PASSED</span></div>
+          <div class="row"><span>Lookup smoke test</span><span class="pass">PASSED</span></div>
+          <div class="row"><span>Broken local links</span><span class="pass">0</span></div>
+          <div class="row"><span>Secrets / machine paths</span><span class="pass">NONE FOUND</span></div>
+        </div>
+        <div class="panel">
+          <h2>Knowledge footprint</h2>
+          <div class="metrics">
+            <div class="m"><b>565</b><span>structured records</span></div>
+            <div class="m"><b>1,549</b><span>business terms</span></div>
+            <div class="m"><b>6</b><span>GCC markets</span></div>
+          </div>
+          <div style="margin-top:25px"><div class="big">3</div><div class="sub">analysis modes · research / diagnosis / precheck</div></div>
+          <div style="margin-top:22px"><div class="big">1</div><div class="sub">decision-grade Markdown deliverable</div></div>
+        </div>
+      </div>
+    </section>
+    <div class="foot"><span>TEST EVIDENCE · repository release snapshot</span><span>Reference knowledge still requires live verification</span></div>
+  </main>
+</body>
+</html>
+
