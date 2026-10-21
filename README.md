@@ -167,7 +167,7 @@ python scripts/lookup.py term 清关 --limit 3
 
 本项目由 [@origami3521905038-hash](https://github.com/origami3521905038-hash) 与 [@18719203981lkr-spec](https://github.com/18719203981lkr-spec) 共同完成。
 
-欢迎通过 Issue 和 Pull Request 提交来源核验、行业补充、方法改进与跨宿主测试。协作规范见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+完整贡献记录见 [CONTRIBUTORS.md](CONTRIBUTORS.md)。欢迎通过 Issue 和 Pull Request 提交来源核验、行业补充、方法改进与跨宿主测试。协作规范见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 许可
 
