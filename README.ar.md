@@ -112,11 +112,11 @@ cp -R gulfgate-country-analysis ~/.codex/skills/
 
 ## المشاركون في الإنشاء
 
-أُنجز هذا المشروع بالتعاون بين [@origami3521905038-hash](https://github.com/origami3521905038-hash) و[@18719203981lkr-spec](https://github.com/18719203981lkr-spec).
+أُنجز هذا المشروع بالتعاون بين [@origami3521905038-hash](https://github.com/origami3521905038-hash) و[@18719203981lkr-spec](https://github.com/18719203981lkr-spec) و[@konczgrignani409-blip](https://github.com/konczgrignani409-blip) و[@yao132517-byte](https://github.com/yao132517-byte) و[@m17783458051-tutu](https://github.com/m17783458051-tutu).
 
 راجع [CONTRIBUTORS.md](CONTRIBUTORS.md) لسجل الإسناد الكامل. نرحب بالمساهمات عبر Issues وPull Requests. راجع [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## الترخيص
 
-حقوق النشر مشتركة بين المشاركين في إنشاء المشروع. يمكن التواصل مع المؤلفين لمناقشة إعادة الاستخدام العام أو التعاون التجاري أو التوسع القطاعي أو الإصدارات المخصصة.
+حقوق النشر مشتركة بين المشاركين الخمسة في إنشاء المشروع. يمكن التواصل مع المؤلفين لمناقشة إعادة الاستخدام العام أو التعاون التجاري أو التوسع القطاعي أو الإصدارات المخصصة.
 

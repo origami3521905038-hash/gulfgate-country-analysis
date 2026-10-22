@@ -165,11 +165,11 @@ python scripts/lookup.py term 清关 --limit 3
 
 ## 共创者
 
-本项目由 [@origami3521905038-hash](https://github.com/origami3521905038-hash) 与 [@18719203981lkr-spec](https://github.com/18719203981lkr-spec) 共同完成。
+本项目由 [@origami3521905038-hash](https://github.com/origami3521905038-hash)、[@18719203981lkr-spec](https://github.com/18719203981lkr-spec)、[@konczgrignani409-blip](https://github.com/konczgrignani409-blip)、[@yao132517-byte](https://github.com/yao132517-byte) 和 [@m17783458051-tutu](https://github.com/m17783458051-tutu) 共同完成。
 
 完整贡献记录见 [CONTRIBUTORS.md](CONTRIBUTORS.md)。欢迎通过 Issue 和 Pull Request 提交来源核验、行业补充、方法改进与跨宿主测试。协作规范见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 许可
 
-版权归两位共创者共同所有。欢迎就公开复用、商业合作、行业扩展和定制版本联系作者获取授权。
+版权归五位共创者共同所有。欢迎就公开复用、商业合作、行业扩展和定制版本联系作者获取授权。
 
